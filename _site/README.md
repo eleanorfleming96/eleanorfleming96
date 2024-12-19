@@ -43,6 +43,7 @@ If you host your code on GitHub, you can use [GitHub Pages](https://pages.github
 
 No matter your production or hosting setup, be sure to verify the `baseurl` option file and `CNAME` settings. Not applying this correctly can mean broken styles on your site.
 
+
 ## Development
 
 Poole has two branches, but only one is used for active development.
