@@ -1,30 +1,18 @@
 ---
 layout: page
-title: project1
+title: Airflip Website & Documentation Redesign
 ---
 
-<p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
-</p>
+## Improved Product Messaging and Engagement
+- **Refined Messaging:** Conducted competitive analysis and applied a messaging framework to articulate Airflip's key benefits. By working backwards from personas, I aligned messaging with user needs, highlighting the most impactful features to solve their pain points effectively.
+- **Engaging Visuals:** Created step-by-step workflow videos and animations using Screen Studio to simplify complex features, making them more accessible and visually compelling.
+- **Optimized Call-to-Actions:** Enhanced CTAs through revised text, strategic placement, and visual design improvements, driving higher user engagement and conversion rates.
 
-PROJECT111111111 and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+## Comprehensive and Accessible Documentation
+- **Robust Help Center:** Designed an intuitive documentation site using Mintlify at [help.airflip.com](https://www.help.airflip.com). It includes detailed product guides, terminology definitions, and user-centric content tailored to resolve common pain points.
+- **Seamless Integration:** Linked documentation directly to platform features, allowing users to access relevant guidance in real-time without leaving the product.
 
-There are currently two themes built on Poole:
-
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
-
-Learn more and contribute on [GitHub](https://github.com/poole).
-
-## Setup
-
-Some fun facts about the setup of this project include:
-
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
-
-Thanks for reading!
+## Measurable Impact
+- **+15% Website Engagement:** Increased engagement through refined messaging and visuals.
+- **Boosted Demo Requests:** Strengthened Airflip’s market positioning, reflected in higher demo requests from the landing page.
+- **Reduced Inquiries:** Comprehensive documentation significantly decreased inbound customer support questions.

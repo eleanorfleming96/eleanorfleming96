@@ -2,20 +2,19 @@
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
       <h1>
-        <a href="{{ site.baseurl }}">
-          {{ site.title }}
+        <a href="{{ site.baseurl }}about">
+          Eleanor Fleming
         </a>
       </h1>
       <p class="lead">{{ site.description }}</p>
     </div>
 
     <nav class="sidebar-nav">
-      <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Home</a>
       <a class="sidebar-nav-item" href="{{ site.baseurl }}about">About</a>
-      <a class="sidebar-nav-item" href="{{ site.baseurl }}blog1">Tech Insights</a>
-      <a class="sidebar-nav-item" href="{{ site.baseurl }}blog2">Personal Reflections</a>
-      <a class="sidebar-nav-item" href="{{ site.baseurl }}project1">Project 1</a>
-      <a class="sidebar-nav-item" href="{{ site.baseurl }}project2">Project 2</a>
+      <a class="sidebar-nav-item" href="{{ site.baseurl }}forms-module">Forms Module</a>
+      <a class="sidebar-nav-item" href="{{ site.baseurl }}blog1">Blogs</a>
+      <a class="sidebar-nav-item" href="{{ site.baseurl }}project1">Website Redesign</a>
+      <a class="sidebar-nav-item" href="{{ site.baseurl }}project2">Portfolio Optimization</a>
 
       {% comment %}
         The code below dynamically generates a sidebar nav of pages with

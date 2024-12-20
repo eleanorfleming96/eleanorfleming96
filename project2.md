@@ -1,22 +1,17 @@
 ---
 layout: page
-title: Data Visualization
+title: Portfolio Optimization
 ---
 
-# Data Visualization Projects
+# What is Optimization?
 
-## Interactive Dashboards and Visual Storytelling
+**Optimization** is the process of finding the best solution to a problem from a set of possible solutions. It involves choosing the values of certain variables (called **decision variables**) to either:
 
-This project showcases my work in transforming complex data into meaningful, interactive visualizations. By combining data science techniques with design principles, I create compelling visual narratives that make data accessible and insightful.
+- **Maximize** something desirable (like profit, efficiency, or happiness), and/or  
+- **Minimize** something undesirable (like cost, time, or waste)  
 
-### Key Projects
+while satisfying certain **constraints** (rules or limits) imposed by the problem.
 
-- **COVID-19 Global Impact Tracker**
-  - Developed an interactive map showing pandemic statistics
-  - Used D3.js and Python for data processing
-  - Highlighted global trends and regional variations
+*If you need a refresher on optimization, jump to sections 2 & 3 sections.*
 
-- **Climate Change Visualization**
-  - Created dynamic charts showing temperature and carbon emission trends
-  - Utilized machine learning for predictive modeling
-  - Integrated multiple data sources for comprehensive analysis
+Let’s apply optimization to a financial portfolio to build or adjust a mix of investments (like stocks or other securities) to meet specific goals and rules. Tools like **Aladdin** help investors set up this problem by defining an **objective function (goals)** and **constraints (rules)**. Then, the tool finds the **best mix of investments** that satisfies all these requirements.

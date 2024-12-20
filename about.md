@@ -3,28 +3,28 @@ layout: page
 title: About
 ---
 
-<p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
-</p>
+<div class="message">
+  <p>
+    I am currently a Product Manager and Research Lead at Aitflip - a vendor intelligence platform for enterpriseprocurement teams. As a founding team member, I launched the company's first product, leading the development of vendor research, deal management workflows, and AI-driven spend analytics modules.
+  </p>
+  <p>
+    Previoulsy, I served as an Optimization Specialist at Blackrock for their Aladdin risk and trading platform. I was responsible for delivering new optimization use cases, resolving issues for 10+ enterprise clients, and driving optimization adoption for portfolio construction and risk management tools.
+  </p>
+  <p>
+    I graduated from UC Berkeley with a BA in Data Science (Cognition and AI emphasis) in 2019. I worked for the Division of Data Science, where I led a marketing team to promote the launch of the new data science major. I was also the Chief Marketing Officer for ML@B, Berkeley's machine learning club, where I created strategic content showcasing the academic and industry applications of machine learning.
+  </p>
+</div>
 
-LALALLALALALALALALALLALLAL and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+## 🌟 Portfolio Highlights
 
-There are currently two themes built on Poole:
+📋 **Forms Module**  
+  Led a cross-functional team to design and launch a form builder module.
 
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
+✍️ **Blogs**  
+  Authored articles demystifying procurement concepts and exploring technology trends in spend analysis.
 
-Learn more and contribute on [GitHub](https://github.com/poole).
+🌐 **Website Redesign**  
+  Led a company website and product documentation redesign, improving usability and brand alignment.
 
-## Setup
-
-Some fun facts about the setup of this project include:
-
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
-
-Thanks for reading!
+📊 **Portfolio Optimization**  
+  High-level explanation of portfolio optimization with supporting examples.
