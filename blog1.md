@@ -28,3 +28,21 @@ title: Airflip Blogs
     </div>
   </div>
 </div>
+
+## UC Berkeley Initiatives
+
+<div class="blog-grid">
+  <div class="blog-card">
+    <div class="card-content">
+      <h3>Chief Marketing Officer at Machine Learning at Berkeley</h3>
+      <p>Explore my role in marketing for <a href="https://www.facebook.com/berkeleyml/videos">Machine Learning at Berkeley</a>. Check out an example marketing video <a href="https://www.youtube.com/watch?v=WOmRbSqzghQ">here</a>.</p>
+    </div>
+  </div>
+
+  <div class="blog-card">
+    <div class="card-content">
+      <h3>Content Lead for the Division of Data Science</h3>
+      <p>Learn about my contributions as a content lead for the <a href="https://cdss.berkeley.edu/">Division of Data Science</a>.</p>
+    </div>
+  </div>
+</div>
