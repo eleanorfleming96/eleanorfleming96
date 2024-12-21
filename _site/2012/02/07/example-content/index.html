@@ -33,7 +33,10 @@
   <body>
 
     <div class="sidebar">
-  <div class="container sidebar-sticky">
+  <div class="container sidebar-sticky" style="position: relative; top: -40px;">
+    <!-- Add Headshot Image -->
+    <img src="/public/images/headshot_zoomed_2.png" alt="Eleanor Fleming" class="headshot">
+    <!-- End Headshot Image -->
     <div class="sidebar-about">
       <h1>
         <a href="/about">
@@ -43,12 +46,32 @@
       <p class="lead">Product Portfolio</p>
     </div>
 
+    <!-- Style headshot -->
+    <style>
+      .headshot {
+        width: 260px;
+        height: 260px;
+        border-radius: 50%;
+        display: block;
+        position: relative;
+        top: -20px;
+        margin: 20px 100px 10px auto; /* Using auto for left/right margins to center */
+        object-fit: cover;
+        object-position: center;
+      }
+      .sidebar-sticky {
+        top: 0 !important;
+      }
+    </style>
+    <!-- End style headshot -->
+
     <nav class="sidebar-nav">
       <a class="sidebar-nav-item" href="/about">About</a>
       <a class="sidebar-nav-item" href="/forms-module">Forms Module</a>
       <a class="sidebar-nav-item" href="/blog1">Blogs & Content</a>
       <a class="sidebar-nav-item" href="/project1">Website Redesign</a>
       <a class="sidebar-nav-item" href="/project2">Portfolio Optimization</a>
+      <a class="sidebar-nav-item" href="/collage">Fun Stuff</a>
 
       
     </nav>

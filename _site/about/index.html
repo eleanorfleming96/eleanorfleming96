@@ -33,7 +33,10 @@
   <body>
 
     <div class="sidebar">
-  <div class="container sidebar-sticky">
+  <div class="container sidebar-sticky" style="position: relative; top: -40px;">
+    <!-- Add Headshot Image -->
+    <img src="/public/images/headshot_zoomed_2.png" alt="Eleanor Fleming" class="headshot">
+    <!-- End Headshot Image -->
     <div class="sidebar-about">
       <h1>
         <a href="/about">
@@ -43,12 +46,32 @@
       <p class="lead">Product Portfolio</p>
     </div>
 
+    <!-- Style headshot -->
+    <style>
+      .headshot {
+        width: 260px;
+        height: 260px;
+        border-radius: 50%;
+        display: block;
+        position: relative;
+        top: -20px;
+        margin: 20px 100px 10px auto; /* Using auto for left/right margins to center */
+        object-fit: cover;
+        object-position: center;
+      }
+      .sidebar-sticky {
+        top: 0 !important;
+      }
+    </style>
+    <!-- End style headshot -->
+
     <nav class="sidebar-nav">
       <a class="sidebar-nav-item" href="/about">About</a>
       <a class="sidebar-nav-item" href="/forms-module">Forms Module</a>
       <a class="sidebar-nav-item" href="/blog1">Blogs & Content</a>
       <a class="sidebar-nav-item" href="/project1">Website Redesign</a>
       <a class="sidebar-nav-item" href="/project2">Portfolio Optimization</a>
+      <a class="sidebar-nav-item" href="/collage">Fun Stuff</a>
 
       
     </nav>
@@ -62,9 +85,9 @@
       <div class="page">
   <h1 class="page-title">About</h1>
   <blockquote>
-  <p>I am currently a Product Manager and Research Lead at <a href="https://www.airflip.com/">Airflip</a>, a vendor intelligence platform for enterprise procurement teams. As a founding team member, I launched the company’s first product, leading the development of our vendor research, deal management workflows, and AI-driven spend analytics.</p>
+  <p>I am currently a Product Manager and Research Lead at <a href="https://www.airflip.com/">Airflip</a>, a vendor intelligence platform for enterprise procurement teams. As the first hire, I launched our intial product, leading the development of our vendor research, deal management workflows, and AI-driven spend analytics.</p>
 
-  <p>Previously, I served as an Optimization Specialist at Blackrock working on their <a href="https://www.blackrock.com/aladdin/offerings/aladdin-enterprise">Aladdin</a> risk and trading platform. I was responsible for delivering new optimization use cases, resolving issues for 10+ enterprise clients, and driving optimization adoption for portfolio construction and risk management tools.</p>
+  <p>Previously, I was as an Optimization Specialist at Blackrock working on their <a href="https://www.blackrock.com/aladdin/offerings/aladdin-enterprise">Aladdin</a> risk and trading platform. I was responsible for delivering new optimization use cases, resolving issues for 10+ enterprise clients, and driving optimization adoption for portfolio construction and risk management tools.</p>
 
   <p>I graduated from UC Berkeley with a BA in Data Science (Cognition and AI emphasis) in 2019. While in school, I worked for the <a href="https://cdss.berkeley.edu/">Division of Data Science</a>, where I led a marketing team to promote the launch of the new data science major. I was also the Chief Marketing Officer for <a href="https://coral-partners-321934.framer.app/">ML@B</a>, Berkeley’s machine learning club, where I created strategic content showcasing the academic and industry applications of machine learning.</p>
 </blockquote>

@@ -33,7 +33,10 @@
   <body>
 
     <div class="sidebar">
-  <div class="container sidebar-sticky">
+  <div class="container sidebar-sticky" style="position: relative; top: -40px;">
+    <!-- Add Headshot Image -->
+    <img src="/public/images/headshot_zoomed_2.png" alt="Eleanor Fleming" class="headshot">
+    <!-- End Headshot Image -->
     <div class="sidebar-about">
       <h1>
         <a href="/about">
@@ -43,12 +46,32 @@
       <p class="lead">Product Portfolio</p>
     </div>
 
+    <!-- Style headshot -->
+    <style>
+      .headshot {
+        width: 260px;
+        height: 260px;
+        border-radius: 50%;
+        display: block;
+        position: relative;
+        top: -20px;
+        margin: 20px 100px 10px auto; /* Using auto for left/right margins to center */
+        object-fit: cover;
+        object-position: center;
+      }
+      .sidebar-sticky {
+        top: 0 !important;
+      }
+    </style>
+    <!-- End style headshot -->
+
     <nav class="sidebar-nav">
       <a class="sidebar-nav-item" href="/about">About</a>
       <a class="sidebar-nav-item" href="/forms-module">Forms Module</a>
       <a class="sidebar-nav-item" href="/blog1">Blogs & Content</a>
       <a class="sidebar-nav-item" href="/project1">Website Redesign</a>
       <a class="sidebar-nav-item" href="/project2">Portfolio Optimization</a>
+      <a class="sidebar-nav-item" href="/collage">Fun Stuff</a>
 
       
     </nav>
@@ -61,20 +84,213 @@
     <div class="content container">
       <div class="page">
   <h1 class="page-title">Portfolio Optimization</h1>
-  <h1 id="what-is-optimization">What is Optimization?</h1>
-
-<p><strong>Optimization</strong> is the process of finding the best solution to a problem from a set of possible solutions. It involves choosing the values of certain variables (called <strong>decision variables</strong>) to either:</p>
+  <p><strong>Optimization</strong> is the process of finding the best solution to a problem from a set of possible solutions. It involves selecting the values of certain variables (<strong>decision variables</strong>) to either:</p>
 
 <ul>
-  <li><strong>Maximize</strong> something desirable (like profit, efficiency, or happiness), and/or</li>
-  <li><strong>Minimize</strong> something undesirable (like cost, time, or waste)</li>
+  <li><strong>Maximize</strong> something desirable (e.g., profit, efficiency, or happiness), and/or</li>
+  <li><strong>Minimize</strong> something undesirable (e.g., cost, time, or waste),</li>
 </ul>
 
 <p>while satisfying certain <strong>constraints</strong> (rules or limits) imposed by the problem.</p>
 
-<p><em>If you need a refresher on optimization, jump to sections 2 &amp; 3 sections.</em></p>
+<h2 id="visualizing-the-efficient-frontier">Visualizing the Efficient Frontier</h2>
 
-<p>Let’s apply optimization to a financial portfolio to build or adjust a mix of investments (like stocks or other securities) to meet specific goals and rules. Tools like <strong>Aladdin</strong> help investors set up this problem by defining an <strong>objective function (goals)</strong> and <strong>constraints (rules)</strong>. Then, the tool finds the <strong>best mix of investments</strong> that satisfies all these requirements.</p>
+<p>To better understand the efficient frontier, here’s an interactive chart:</p>
+
+<!-- EMBED THE HTML CHART -->
+<style>
+iframe {
+    border: none;
+    box-shadow: none;
+}
+</style>
+
+<iframe src="/public/charts/1.html" width="100%" height="600px"></iframe>
+<!-- END EMBEDDING THE HTML CHART -->
+
+<p>Let’s apply optimization to a financial portfolio. The goal is to adjust a mix of investments (e.g., stocks or other securities) to meet specific objectives and constraints. Tools like <strong>Aladdin</strong> can help investors set up this problem by defining:</p>
+
+<ul>
+  <li><strong>Objective function (goals)</strong></li>
+  <li><strong>Constraints (rules)</strong></li>
+</ul>
+
+<p>The tool then finds the <strong>optimal mix of investments</strong> that satisfies all the requirements.</p>
+
+<hr />
+
+<h2 id="example-1-minimizing-portfolio-risk">Example 1: Minimizing Portfolio Risk</h2>
+
+<p>Imagine you currently own a mix of three stocks. Your goal is to adjust how much money you have invested in each stock (by buying more or selling some) to reduce the overall risk of your portfolio. At the same time, you need to make sure of two things:</p>
+
+<ol>
+  <li>All your money stays invested—no leftover cash. In other words, you are <strong>fully invested</strong>.</li>
+  <li>You can’t borrow stocks to sell them; you can only sell what you already own. In other words, you are <strong>no shorting</strong>.</li>
+</ol>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Stock</strong></th>
+      <th><strong>Current Weight</strong></th>
+      <th><strong>New Weight</strong></th>
+      <th><strong>Risk/Volatility</strong></th>
+      <th><strong>Sector</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>A</td>
+      <td>20%</td>
+      <td>x₁</td>
+      <td>20</td>
+      <td>Technology</td>
+    </tr>
+    <tr>
+      <td>B</td>
+      <td>30%</td>
+      <td>x₂</td>
+      <td>30</td>
+      <td>Energy</td>
+    </tr>
+    <tr>
+      <td>C</td>
+      <td>50%</td>
+      <td>x₃</td>
+      <td>40</td>
+      <td>Energy</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li><strong>Current Weight</strong> represents your initial allocation to each stock.</li>
+  <li><strong>New Weights</strong> <code>x₁, x₂, x₃</code> represent the new proportions of your budget invested in Stocks A, B, and C <strong>after</strong> optimizing.</li>
+</ul>
+
+<p>The objective is to <strong>minimize portfolio risk</strong>, expressed as:</p>
+
+<p><code>Z(x) = 20x₁ + 30x₂ + 40x₃</code></p>
+
+<h3 id="constraints">Constraints</h3>
+
+<ol>
+  <li>
+    <p><strong>Fully Invested</strong>:<br />
+100% of the available capital must be allocated.<br />
+<code>x₁ + x₂ + x₃ = 1</code></p>
+  </li>
+  <li>
+    <p><strong>No Shorting</strong>:<br />
+This is a long-only portfolio, in other words, there can be no negative positions.<br />
+<code>x₁, x₂, x₃ ≥ 0</code></p>
+  </li>
+</ol>
+
+<h3 id="optimal-solution">Optimal Solution</h3>
+
+<p>When this optimization problem is solved, the <strong>optimal solution</strong> is to allocate 100% of the portfolio to <strong>Stock A</strong>, as this is the stock with the lowest risk. This satisfies the objective of minimizing portfolio risk under the given constraints.</p>
+
+<hr />
+
+<h2 id="example-2-minimizing-risk-while-maximizing-esg-scores">Example 2: Minimizing Risk While Maximizing ESG Scores</h2>
+
+<p>Building on the first example, let’s now introduce a second objective: <strong>maximizing ESG (Environmental, Social, and Governance) scores</strong>, which measure the sustainability and ethical impact of an investment.</p>
+
+<p>The new objective is to balance minimizing portfolio risk with maximizing ESG scores. The problem setup remains the same, with the following additions:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Stock</strong></th>
+      <th><strong>Current Weight</strong></th>
+      <th><strong>New Weight</strong></th>
+      <th><strong>ESG Score</strong></th>
+      <th><strong>Risk/Volatility</strong></th>
+      <th><strong>Sector</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>A</td>
+      <td>20%</td>
+      <td>x₁</td>
+      <td>10</td>
+      <td>20</td>
+      <td>Technology</td>
+    </tr>
+    <tr>
+      <td>B</td>
+      <td>30%</td>
+      <td>x₂</td>
+      <td>15</td>
+      <td>30</td>
+      <td>Energy</td>
+    </tr>
+    <tr>
+      <td>C</td>
+      <td>50%</td>
+      <td>x₃</td>
+      <td>20</td>
+      <td>40</td>
+      <td>Energy</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="dual-objective-optimization-problem">Dual Objective Optimization Problem</h3>
+
+<p>To balance the two objectives, we define a <strong>weighted objective function</strong>:</p>
+
+<p><code>Z(x) = w₁ * (20x₁ + 30x₂ + 40x₃) - w₂ * (10x₁ + 15x₂ + 20x₃)</code></p>
+
+<p>Where:</p>
+<ul>
+  <li><code>w₁</code> and <code>w₂</code> are weights that reflect the importance of minimizing risk and maximizing ESG scores, respectively.</li>
+  <li>The first term represents portfolio risk (to minimize).</li>
+  <li>The second term represents ESG scores (to maximize).</li>
+</ul>
+
+<h3 id="constraints-1">Constraints</h3>
+
+<ol>
+  <li>
+    <p><strong>Fully Invested</strong>:<br />
+100% of the available capital must be allocated.<br />
+<code>x₁ + x₂ + x₃ = 1</code></p>
+  </li>
+  <li>
+    <p><strong>No Shorting</strong>:<br />
+This is a long-only portfolio, in other words, there can be no negative positions.<br />
+<code>x₁, x₂, x₃ ≥ 0</code></p>
+  </li>
+</ol>
+
+<h3 id="weights-and-priority">Weights and Priority</h3>
+
+<p>The weights <code>w₁</code> and <code>w₂</code> allow the investor to decide which objective takes priority:</p>
+<ul>
+  <li>If <code>w₁</code> &gt; <code>w₂</code>, the model prioritizes minimizing risk.</li>
+  <li>If <code>w₂</code> &gt; <code>w₁</code>, the model prioritizes maximizing ESG scores.</li>
+</ul>
+
+<p>The optimal portfolio allocation will depend on the chosen weights, reflecting the investor’s preferences.</p>
+
+<hr />
+
+<h2 id="efficient-frontier">Efficient Frontier</h2>
+
+<p>The <strong>efficient frontier</strong> is a concept in portfolio optimization that represents the set of optimal portfolios offering the best possible trade-off between competing objectives, such as risk and ESG scores.</p>
+
+<p>Each point on the efficient frontier corresponds to a portfolio that:</p>
+<ol>
+  <li>Minimizes risk for a given level of ESG score, or</li>
+  <li>Maximizes ESG score for a given level of risk.</li>
+</ol>
+
+<p>Portfolios below the efficient frontier are suboptimal because either a higher ESG score could be achieved for the same risk, or lower risk could be achieved for the same ESG score. By varying the weights <code>w₁</code> and <code>w₂</code>, the optimization process identifies portfolios along the efficient frontier, allowing investors to select the portfolio that best aligns with their goals.</p>
+
+<hr />
 
 </div>
 
