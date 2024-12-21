@@ -11,8 +11,8 @@ tagline:          'Product Portfolio'
 description:      "Product professional focused on user-centered design"
 
 # URL settings
-url:              https://eleanorfleming96.github.io
-baseurl:          /eleanorfleming96
+url:              ""
+baseurl:          ""
 
 # Theme settings
 remote_theme:     poole/hyde
