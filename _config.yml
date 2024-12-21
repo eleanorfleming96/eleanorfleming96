@@ -9,14 +9,18 @@ permalink:        pretty
 title:            Eleanor Fleming
 tagline:          'Product Portfolio'
 description:      "Product professional focused on user-centered design"
-url:              https://eleanorfleming96.github.io
+
+# URL settings - blank for local dev, /eleanorfleming96 for production
+url:              ""
 baseurl:          ""
 
 # Build settings
-theme:            hyde
 plugins:
   - jekyll-paginate
   - jekyll-gist
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
 
 paginate:         5
 paginate_path:    "/blog/page:num/"

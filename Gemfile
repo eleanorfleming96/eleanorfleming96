@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'jekyll'
-gem 'hyde-theme'
+gem 'jekyll', '~> 4.2'
 gem 'jekyll-paginate'
 gem 'jekyll-gist'
 gem 'jekyll-sitemap'

@@ -1,9 +1,8 @@
 ---
-layout: page
+layout: home
 title: About
 permalink: /
 ---
-
 > I am currently a Product Manager and Research Lead at [Airflip](https://www.airflip.com/), a vendor intelligence platform for enterprise procurement teams. As the first hire, I launched our intial product, leading the development of our vendor research, deal management workflows, and AI-driven spend analytics.
 >
 > Previously, I was as an Optimization Specialist at Blackrock working on their [Aladdin](https://www.blackrock.com/aladdin/offerings/aladdin-enterprise) risk and trading platform. I was responsible for delivering new optimization use cases, resolving issues for 10+ enterprise clients, and driving optimization adoption for portfolio construction and risk management tools.
