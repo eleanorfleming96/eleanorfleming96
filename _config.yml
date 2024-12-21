@@ -1,27 +1,27 @@
 # Dependencies
 markdown:         kramdown
-highlighter:      rouge  # pygments is deprecated
+highlighter:      rouge
 
 # Permalinks
 permalink:        pretty
 
 # Setup
 title:            Eleanor Fleming
-tagline:          'Portfolio'
-description:      "Product Portfolio"
-url:              https://eleanorfleming96.github.io  # Update this to your GitHub Pages URL
-baseurl:          /eleanorfleming96  # This should match your repository name
+tagline:          'Product Portfolio'
+description:      "Product professional focused on user-centered design"
+url:              https://eleanorfleming96.github.io
+baseurl:          ""
 
 # Build settings
-remote_theme:     poole/hyde  # If you're using the Hyde theme
+theme:            hyde
 plugins:
-  - jekyll-gist
   - jekyll-paginate
-  - jekyll-remote-theme
+  - jekyll-gist
 
 paginate:         5
+paginate_path:    "/blog/page:num/"
 
 # Custom vars
-version:          2.1.0
+version:          1.0.0
 github:
   repo:           https://github.com/eleanorfleming96/eleanorfleming96
