@@ -10,9 +10,12 @@ title:            Eleanor Fleming
 tagline:          'Product Portfolio'
 description:      "Product professional focused on user-centered design"
 
-# URL settings - blank for local dev, /eleanorfleming96 for production
-url:              ""
-baseurl:          ""
+# URL settings
+url:              https://eleanorfleming96.github.io
+baseurl:          /eleanorfleming96
+
+# Theme settings
+remote_theme:     poole/hyde
 
 # Build settings
 plugins:
@@ -21,6 +24,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-feed
+  - jekyll-remote-theme
 
 paginate:         5
 paginate_path:    "/blog/page:num/"
