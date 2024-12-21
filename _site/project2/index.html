@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="/public/css/poole.css">
   <link rel="stylesheet" href="/public/css/syntax.css">
   <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="/public/css/custom.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
 
   <!-- Icons -->
@@ -43,7 +44,7 @@
           Eleanor Fleming
         </a>
       </h1>
-      <p class="lead">Product professional focused on user-centered design</p>
+      <p class="lead">Product Manager</p>
     </div>
 
     <!-- Style headshot -->
@@ -62,21 +63,30 @@
       .sidebar-sticky {
         top: 0 !important;
       }
+      .sidebar {
+        background-color: #00468b !important; /* Change this color to whatever you prefer */
+      }
+      .sidebar-nav-item {
+        color: #fff !important; /* This changes the text color of the navigation items */
+      }
+      .sidebar-nav-item:hover {
+        text-decoration: none;
+        opacity: 0.8;
+      }
     </style>
     <!-- End style headshot -->
 
     <nav class="sidebar-nav">
-      <a class="sidebar-nav-item" href="/">About</a>
+      <a class="sidebar-nav-item" href="/about/">About</a>
       <a class="sidebar-nav-item" href="/forms-module">Forms Module</a>
       <a class="sidebar-nav-item" href="/blog1">Blogs & Content</a>
       <a class="sidebar-nav-item" href="/project1">Website Redesign</a>
       <a class="sidebar-nav-item" href="/project2">Portfolio Optimization</a>
-      <a class="sidebar-nav-item" href="/collage">Fun Stuff</a>
+      <a class="sidebar-nav-item" href="/collage">Adventures</a>
 
       
     </nav>
 
-    <p>Currently v1.0.0</p>
   </div>
 </div>
 
@@ -93,21 +103,6 @@
 
 <p>while satisfying certain <strong>constraints</strong> (rules or limits) imposed by the problem.</p>
 
-<h2 id="visualizing-the-efficient-frontier">Visualizing the Efficient Frontier</h2>
-
-<p>To better understand the efficient frontier, here’s an interactive chart:</p>
-
-<!-- EMBED THE HTML CHART -->
-<style>
-iframe {
-    border: none;
-    box-shadow: none;
-}
-</style>
-
-<iframe src="/public/charts/1.html" width="100%" height="600px"></iframe>
-<!-- END EMBEDDING THE HTML CHART -->
-
 <p>Let’s apply optimization to a financial portfolio. The goal is to adjust a mix of investments (e.g., stocks or other securities) to meet specific objectives and constraints. Tools like <strong>Aladdin</strong> can help investors set up this problem by defining:</p>
 
 <ul>
@@ -121,75 +116,81 @@ iframe {
 
 <h2 id="example-1-minimizing-portfolio-risk">Example 1: Minimizing Portfolio Risk</h2>
 
-<p>Imagine you currently own a mix of three stocks. Your goal is to adjust how much money you have invested in each stock (by buying more or selling some) to reduce the overall risk of your portfolio. At the same time, you need to make sure of two things:</p>
+<p>Imagine you currently own a mix of three stocks. <strong>Current Weight</strong> represents your initial allocation to each stock. Your goal is to populate the <strong>New Weight</strong> column <code class="language-plaintext highlighter-rouge">x₁, x₂, x₃</code> by adjusting how much money you have invested in each stock (by buying more or selling some) to reduce the overall risk of your portfolio. At the same time, you need to make sure of two things:</p>
 
 <ol>
   <li>All your money stays invested—no leftover cash. In other words, you are <strong>fully invested</strong>.</li>
-  <li>You can’t borrow stocks to sell them; you can only sell what you already own. In other words, you are <strong>no shorting</strong>.</li>
+  <li>You can’t borrow stocks to sell them; you can only sell what you already own. In other words, <strong>no shorting</strong>.</li>
 </ol>
 
 <table>
   <thead>
     <tr>
-      <th><strong>Stock</strong></th>
-      <th><strong>Current Weight</strong></th>
-      <th><strong>New Weight</strong></th>
-      <th><strong>Risk/Volatility</strong></th>
-      <th><strong>Sector</strong></th>
+      <th style="text-align: left"><strong>Stock</strong></th>
+      <th style="text-align: left"><strong>Current Weight</strong></th>
+      <th style="text-align: left"><strong>New Weight</strong></th>
+      <th style="text-align: left"><strong>Risk/Volatility</strong></th>
+      <th style="text-align: left"><strong>Sector</strong></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>A</td>
-      <td>20%</td>
-      <td>x₁</td>
-      <td>20</td>
-      <td>Technology</td>
+      <td style="text-align: left">A</td>
+      <td style="text-align: left">20%</td>
+      <td style="text-align: left">x₁</td>
+      <td style="text-align: left">20</td>
+      <td style="text-align: left">Technology</td>
     </tr>
     <tr>
-      <td>B</td>
-      <td>30%</td>
-      <td>x₂</td>
-      <td>30</td>
-      <td>Energy</td>
+      <td style="text-align: left">B</td>
+      <td style="text-align: left">30%</td>
+      <td style="text-align: left">x₂</td>
+      <td style="text-align: left">30</td>
+      <td style="text-align: left">Energy</td>
     </tr>
     <tr>
-      <td>C</td>
-      <td>50%</td>
-      <td>x₃</td>
-      <td>40</td>
-      <td>Energy</td>
+      <td style="text-align: left">C</td>
+      <td style="text-align: left">50%</td>
+      <td style="text-align: left">x₃</td>
+      <td style="text-align: left">40</td>
+      <td style="text-align: left">Energy</td>
     </tr>
   </tbody>
 </table>
 
-<ul>
-  <li><strong>Current Weight</strong> represents your initial allocation to each stock.</li>
-  <li><strong>New Weights</strong> <code class="language-plaintext highlighter-rouge">x₁, x₂, x₃</code> represent the new proportions of your budget invested in Stocks A, B, and C <strong>after</strong> optimizing.</li>
-</ul>
-
-<p>The objective is to <strong>minimize portfolio risk</strong>, expressed as:</p>
+<p>The <strong>objective function</strong> for this problem is to <strong>minimize portfolio risk</strong>, expressed as:</p>
 
 <p><code class="language-plaintext highlighter-rouge">Z(x) = 20x₁ + 30x₂ + 40x₃</code></p>
 
-<h3 id="constraints">Constraints</h3>
+<p>The <strong>constraints</strong> for this problem are:</p>
 
 <ol>
   <li>
-    <p><strong>Fully Invested</strong>:<br />
+    <p><strong>Remain Fully Invested</strong>:<br />
 100% of the available capital must be allocated.<br />
 <code class="language-plaintext highlighter-rouge">x₁ + x₂ + x₃ = 1</code></p>
   </li>
   <li>
     <p><strong>No Shorting</strong>:<br />
-This is a long-only portfolio, in other words, there can be no negative positions.<br />
+This is a long-only portfolio, in other words, there can be no negative short positions.<br />
 <code class="language-plaintext highlighter-rouge">x₁, x₂, x₃ ≥ 0</code></p>
   </li>
 </ol>
 
 <h3 id="optimal-solution">Optimal Solution</h3>
 
-<p>When this optimization problem is solved, the <strong>optimal solution</strong> is to allocate 100% of the portfolio to <strong>Stock A</strong>, as this is the stock with the lowest risk. This satisfies the objective of minimizing portfolio risk under the given constraints.</p>
+<!-- EMBED THE HTML CHART -->
+<style>
+iframe {
+    border: none;
+    box-shadow: none;
+}
+</style>
+
+<iframe src="/public/charts/1.html" width="100%" height="600px"></iframe>
+<!-- END EMBEDDING THE HTML CHART -->
+
+<p>Unsurprisingly, the optimal solution is to allocate 100% of the portfolio to <strong>Stock A</strong>, as this is the stock with the lowest risk. This satisfies the objective of minimizing portfolio risk under the given constraints of remaining fully invested and no shorting.</p>
 
 <hr />
 
@@ -197,46 +198,46 @@ This is a long-only portfolio, in other words, there can be no negative position
 
 <p>Building on the first example, let’s now introduce a second objective: <strong>maximizing ESG (Environmental, Social, and Governance) scores</strong>, which measure the sustainability and ethical impact of an investment.</p>
 
-<p>The new objective is to balance minimizing portfolio risk with maximizing ESG scores. The problem setup remains the same, with the following additions:</p>
-
 <table>
   <thead>
     <tr>
-      <th><strong>Stock</strong></th>
-      <th><strong>Current Weight</strong></th>
-      <th><strong>New Weight</strong></th>
-      <th><strong>ESG Score</strong></th>
-      <th><strong>Risk/Volatility</strong></th>
-      <th><strong>Sector</strong></th>
+      <th style="text-align: left"><strong>Stock</strong></th>
+      <th style="text-align: left"><strong>Current Weight</strong></th>
+      <th style="text-align: left"><strong>New Weight</strong></th>
+      <th style="text-align: left"><strong>ESG Score</strong></th>
+      <th style="text-align: left"><strong>Risk/Volatility</strong></th>
+      <th style="text-align: left"><strong>Sector</strong></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>A</td>
-      <td>20%</td>
-      <td>x₁</td>
-      <td>10</td>
-      <td>20</td>
-      <td>Technology</td>
+      <td style="text-align: left">A</td>
+      <td style="text-align: left">20%</td>
+      <td style="text-align: left">x₁</td>
+      <td style="text-align: left">10</td>
+      <td style="text-align: left">20</td>
+      <td style="text-align: left">Technology</td>
     </tr>
     <tr>
-      <td>B</td>
-      <td>30%</td>
-      <td>x₂</td>
-      <td>15</td>
-      <td>30</td>
-      <td>Energy</td>
+      <td style="text-align: left">B</td>
+      <td style="text-align: left">30%</td>
+      <td style="text-align: left">x₂</td>
+      <td style="text-align: left">15</td>
+      <td style="text-align: left">30</td>
+      <td style="text-align: left">Energy</td>
     </tr>
     <tr>
-      <td>C</td>
-      <td>50%</td>
-      <td>x₃</td>
-      <td>20</td>
-      <td>40</td>
-      <td>Energy</td>
+      <td style="text-align: left">C</td>
+      <td style="text-align: left">50%</td>
+      <td style="text-align: left">x₃</td>
+      <td style="text-align: left">20</td>
+      <td style="text-align: left">40</td>
+      <td style="text-align: left">Energy</td>
     </tr>
   </tbody>
 </table>
+
+<p>The new objective is to balance minimizing portfolio risk with maximizing ESG scores. The problem setup remains the same, with the following additions:</p>
 
 <h3 id="dual-objective-optimization-problem">Dual Objective Optimization Problem</h3>
 
@@ -251,7 +252,7 @@ This is a long-only portfolio, in other words, there can be no negative position
   <li>The second term represents ESG scores (to maximize).</li>
 </ul>
 
-<h3 id="constraints-1">Constraints</h3>
+<h3 id="constraints">Constraints</h3>
 
 <ol>
   <li>

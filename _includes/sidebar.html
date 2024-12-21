@@ -9,7 +9,7 @@
           Eleanor Fleming
         </a>
       </h1>
-      <p class="lead">{{ site.description }}</p>
+      <p class="lead">Product Manager</p>
     </div>
 
     <!-- Style headshot -->
@@ -28,22 +28,31 @@
       .sidebar-sticky {
         top: 0 !important;
       }
+      .sidebar {
+        background-color: #00468b !important; /* Change this color to whatever you prefer */
+      }
+      .sidebar-nav-item {
+        color: #fff !important; /* This changes the text color of the navigation items */
+      }
+      .sidebar-nav-item:hover {
+        text-decoration: none;
+        opacity: 0.8;
+      }
     </style>
     <!-- End style headshot -->
 
     <nav class="sidebar-nav">
-      <a class="sidebar-nav-item" href="{{ site.baseurl }}/">About</a>
+      <a class="sidebar-nav-item" href="{{ site.baseurl }}/about/">About</a>
       <a class="sidebar-nav-item" href="{{ site.baseurl }}/forms-module">Forms Module</a>
       <a class="sidebar-nav-item" href="{{ site.baseurl }}/blog1">Blogs & Content</a>
       <a class="sidebar-nav-item" href="{{ site.baseurl }}/project1">Website Redesign</a>
       <a class="sidebar-nav-item" href="{{ site.baseurl }}/project2">Portfolio Optimization</a>
-      <a class="sidebar-nav-item" href="{{ site.baseurl }}/collage">Fun Stuff</a>
+      <a class="sidebar-nav-item" href="{{ site.baseurl }}/collage">Adventures</a>
 
       {% comment %}
         The code below dynamically generates a sidebar nav of pages with
         {% endcomment %}
     </nav>
 
-    <p>Currently v{{ site.version }}</p>
   </div>
 </div>

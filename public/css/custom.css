@@ -1,0 +1,52 @@
+/* Custom styles to override Hyde defaults */
+
+/* Make content area wider */
+.content {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 48em) {
+  .content {
+    max-width: 55rem;
+    margin-left: 20rem;
+    margin-right: 2rem;
+  }
+}
+
+/* Adjust container width */
+.container {
+  max-width: 55rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Ensure text content uses more width */
+.page, .post {
+  max-width: 55rem;
+  margin: 0 auto;
+}
+
+/* Style hyperlinks */
+.content a,
+.page a,
+.post a,
+a.read-more,
+.content p a,
+.content h1 a,
+.content h2 a,
+.content h3 a {
+  color: #00468b !important;
+}
+
+.content a:hover,
+.page a:hover,
+.post a:hover,
+a.read-more:hover,
+.content p a:hover,
+.content h1 a:hover,
+.content h2 a:hover,
+.content h3 a:hover {
+  text-decoration: underline;
+  color: #00468b !important;
+}
